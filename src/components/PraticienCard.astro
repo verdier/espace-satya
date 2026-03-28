@@ -41,10 +41,8 @@ const base = import.meta.env.BASE_URL;
 const href = `${base}praticiens/${slug}/`;
 ---
 
-<a
-  href={href}
-  class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 ease-out hover:-translate-y-1 border border-warm-200/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-400 focus-visible:ring-offset-2"
-  aria-label={`Voir le profil de ${nom}, ${titre}`}
+<article
+  class="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 ease-out hover:-translate-y-1 border border-warm-200/60 cursor-pointer"
 >
   <!-- Photo -->
   <div class="relative overflow-hidden bg-warm-100">
@@ -107,25 +105,25 @@ const href = `${base}praticiens/${slug}/`;
     {(telephone || email || doctolib || siteWeb) && (
       <div class="flex flex-wrap items-center gap-3 mt-4 pt-3 border-t border-warm-100">
         {telephone && (
-          <a href={`tel:${telephone.replace(/\s/g, '')}`} class="inline-flex items-center gap-1 font-body text-xs text-warm-500 hover:text-sage-600 transition-colors" onclick="event.stopPropagation()">
+          <a href={`tel:${telephone.replace(/\s/g, '')}`} class="relative z-10 inline-flex items-center gap-1 font-body text-xs text-warm-500 hover:text-sage-600 transition-colors">
             <Icon name="phone" class="w-3.5 h-3.5" strokeWidth={1.5} />
             {telephone}
           </a>
         )}
         {email && (
-          <a href={`mailto:${email}`} class="inline-flex items-center gap-1 font-body text-xs text-warm-500 hover:text-sage-600 transition-colors" onclick="event.stopPropagation()">
+          <a href={`mailto:${email}`} class="relative z-10 inline-flex items-center gap-1 font-body text-xs text-warm-500 hover:text-sage-600 transition-colors">
             <Icon name="email" class="w-3.5 h-3.5" strokeWidth={1.5} />
             Email
           </a>
         )}
         {doctolib && (
-          <a href={doctolib} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-body text-xs font-medium text-sage-600 hover:text-sage-700 transition-colors" onclick="event.stopPropagation()">
+          <a href={doctolib} target="_blank" rel="noopener noreferrer" class="relative z-10 inline-flex items-center gap-1 font-body text-xs font-medium text-sage-600 hover:text-sage-700 transition-colors">
             <Icon name="external-link" class="w-3.5 h-3.5" strokeWidth={1.5} />
             Doctolib
           </a>
         )}
         {siteWeb && !doctolib && (
-          <a href={siteWeb} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 font-body text-xs font-medium text-sage-600 hover:text-sage-700 transition-colors" onclick="event.stopPropagation()">
+          <a href={siteWeb} target="_blank" rel="noopener noreferrer" class="relative z-10 inline-flex items-center gap-1 font-body text-xs font-medium text-sage-600 hover:text-sage-700 transition-colors">
             <Icon name="external-link" class="w-3.5 h-3.5" strokeWidth={1.5} />
             Site web
           </a>
@@ -133,12 +131,16 @@ const href = `${base}praticiens/${slug}/`;
       </div>
     )}
 
-    <!-- CTA flèche -->
+    <!-- CTA flèche (stretched link — couvre toute la card) -->
     <div class="flex items-center justify-end mt-4">
-      <span class="inline-flex items-center gap-1.5 font-body text-sm font-semibold text-sage-600 group-hover:text-sage-700 group-hover:gap-2.5 transition-all duration-200">
+      <a
+        href={href}
+        class="inline-flex items-center gap-1.5 font-body text-sm font-semibold text-sage-600 group-hover:text-sage-700 group-hover:gap-2.5 transition-all duration-200 after:absolute after:inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage-400 focus-visible:ring-offset-2"
+        aria-label={`Voir le profil de ${nom}, ${titre}`}
+      >
         Découvrir
         <Icon name="chevron-right" class="w-4 h-4" />
-      </span>
+      </a>
     </div>
   </div>
-</a>
+</article>
