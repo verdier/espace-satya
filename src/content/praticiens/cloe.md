@@ -46,13 +46,6 @@ J'ai développé la **Méthode C.S.V** – Conseil, Santé, Vitalité – une ap
 - **Accompagnement 12 mois – Vitalité** – Un accompagnement long pour une transformation durable, un suivi global et une adaptation continue aux évolutions de vie.
 - **Accompagnement TCA** – Prise en charge spécifique des troubles du comportement alimentaire, en consultation duo avec Pauline (psychothérapeute), avec possibilité de participer à un groupe de parole.
 
-## Tarifs
-
-- **Conseil (1 mois)** – 105 € (bilan nutritionnel à 60 € + suivi à 45 €)
-- **Santé (6 mois)** – 270 € (remise de 15 € incluse)
-- **Vitalité (12 mois)** – 495 € (remise de 60 € incluse)
-- **Accompagnement TCA** – 220 € (2 séances duo diététicienne + psychothérapeute)
-
 Règlement possible en une ou plusieurs fois. Certaines mutuelles proposent un remboursement partiel ou total des consultations de diététique.
 
 ## Pour qui ?

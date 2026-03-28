@@ -19,6 +19,7 @@ tarifs:
   - prestation: "Retraite seule"
     prix: "530 €"
     duree: "Week-end (vendredi au dimanche)"
+    note: "Logement et repas compris"
   - prestation: "Pack complet (accompagnement + retraite)"
     prix: "650 €"
 photo: "../../assets/photos/praticiens/karine-1.jpg"
@@ -40,13 +41,6 @@ Aujourd'hui, j'accompagne les femmes grâce aux soins énergétiques, à l'écou
 - **Accompagnement V.I.B.R.A.T.I.O.N.** – Un chemin sur 3 semaines (1 séance hebdomadaire) pour alléger le corps et apaiser le mental, suivi d'une retraite en pleine nature pour intégrer la transformation.
 - **Suivi préventif** – Un accompagnement au rythme de 3 mois pour maintenir votre énergie et entretenir votre équilibre.
 - **Soins à distance** – Disponibles à l'aide d'une photo, par SMS ou WhatsApp.
-
-## Tarifs
-
-- **Soin Énergétique** – 60 € la séance (1h)
-- **Accompagnement V.I.B.R.A.T.I.O.N.** – 180 € (3 séances individuelles sur 3 semaines)
-- **Retraite seule** – 530 € (du vendredi 14h au dimanche 15h, logement et repas compris)
-- **Pack complet** (accompagnement + retraite) – 650 €
 
 Paiement possible en plusieurs fois.
 

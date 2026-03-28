@@ -18,7 +18,7 @@ const praticiens = defineCollection({
     doctolib: z.string().optional(),
     tarifs: z.array(z.object({
       prestation: z.string(),
-      prix: z.string(),
+      prix: z.string().optional(),
       duree: z.string().optional(),
       note: z.string().optional(),
     })).optional(),

@@ -28,6 +28,7 @@ tarifs:
   - prestation: "Modelage minceur 2 zones"
     prix: "30 €"
     duree: "30 min"
+    note: "Packs : 3 séances (85 €), 6 séances (165 €), 9 séances (260 €)"
   - prestation: "Modelage minceur corps entier"
     prix: "60 €"
     duree: "1h"
@@ -40,6 +41,14 @@ tarifs:
   - prestation: "Soin du visage spécifique"
     prix: "60 €"
     duree: "1h"
+  - prestation: "Épilation sourcils (fil ou cire)"
+    prix: "8 €"
+  - prestation: "Création ligne de sourcils"
+    prix: "12 €"
+  - prestation: "Épilation lèvres + menton + sourcils"
+    prix: "20 €"
+  - prestation: "Épilation demi-jambes"
+    prix: "15 €"
 photo: "../../assets/photos/praticiens/claudia-1.jpg"
 photoAlt: "Claudia, praticienne en massages et soins à l'Espace Satya d'Elne"
 ordre: 4
@@ -56,26 +65,17 @@ Chaque séance est pensée selon vos besoins du moment : récupération, relâch
 ## Ce que je propose
 
 **Massages**
-- **Massage Signature Claudia** (1h – 45 €) – Massage relaxant corps entier aux huiles essentielles
-- **Massage relaxant corps** (30 min – 35 €) – Dénouer les tensions, évacuer le stress, retrouver légèreté et mobilité
-- **Massage jambes légères** (30 min – 35 €) – Modelage drainant pour stimuler le retour veineux et dégonfler les jambes
-- **Massage crânien pijat kepala** (30 min – 25 €) – Massage indonésien du cuir chevelu, nuque, épaules, bras et mains
-- **Massage aux pierres chaudes** (30 min – 40 €) – Pierres volcaniques basalte pour une détente musculaire profonde et un rééquilibrage énergétique
+- **Massage Signature Claudia** – Massage relaxant corps entier aux huiles essentielles
+- **Massage relaxant corps** – Dénouer les tensions, évacuer le stress, retrouver légèreté et mobilité
+- **Massage jambes légères** – Modelage drainant pour stimuler le retour veineux et dégonfler les jambes
+- **Massage crânien pijat kepala** – Massage indonésien du cuir chevelu, nuque, épaules, bras et mains
+- **Massage aux pierres chaudes** – Pierres volcaniques basalte pour une détente musculaire profonde et un rééquilibrage énergétique
 
-**Modelages minceur**
-- **2 zones** (30 min) – 30 € la séance, packs 3 séances (85 €), 6 séances (165 €) ou 9 séances (260 €)
-- **Corps entier** (1h) – 60 €
+**Modelages minceur** – Séances individuelles ou en packs pour un suivi régulier.
 
-**Soins du visage**
-- **Éclat** (30 min – 40 €)
-- **Hydratant** (1h – 50 €)
-- **Spécifique** (1h – 60 €)
+**Soins du visage** – Éclat, hydratant ou spécifique selon les besoins de votre peau.
 
-**Épilations**
-- Sourcils (fil ou cire) – 8 €
-- Création ligne de sourcils – 12 €
-- Lèvres + menton + sourcils – 20 €
-- Demi-jambes – 15 €
+**Épilations** – Sourcils, visage, demi-jambes.
 
 ## Pour qui ?
 
