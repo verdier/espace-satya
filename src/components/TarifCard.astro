@@ -14,7 +14,7 @@ const needsPopover = description && description.length > 80;
 ---
 
 {needsPopover ? (
-<button popovertarget={popoverId} class="tarif-card tarif-card--clickable">
+<button data-popover-trigger={popoverId} class="tarif-card tarif-card--clickable">
   <div class="flex items-start justify-between gap-3 text-left">
     <div class="min-w-0">
       <p class="font-body font-semibold text-warm-800">{prestation}</p>
@@ -59,7 +59,10 @@ const needsPopover = description && description.length > 80;
 )}
 
 {needsPopover && (
-  <div id={popoverId} popover class="tarif-popover">
+  <div id={popoverId} popover="manual" class="tarif-popover">
+    <button data-popover-close class="tarif-popover-close" aria-label="Fermer">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+    </button>
     <p class="font-body font-semibold text-warm-800 mb-2">{prestation}</p>
     <p class="font-body text-sm text-warm-600 leading-relaxed">{description}</p>
     {duree && <p class="font-body text-sm text-warm-400 mt-2">{duree}</p>}
@@ -97,9 +100,52 @@ const needsPopover = description && description.length > 80;
     margin: auto;
     inset: 0;
     height: fit-content;
+    position: fixed;
   }
 
   .tarif-popover::backdrop {
-    background: rgba(0,0,0,.15);
+    background: rgba(0,0,0,.25);
+  }
+
+  .tarif-popover-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    color: var(--color-warm-400);
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 50%;
+    transition: color .2s;
+  }
+
+  .tarif-popover-close:hover {
+    color: var(--color-warm-700);
   }
 </style>
+
+<script>
+  document.addEventListener('click', (e) => {
+    const trigger = (e.target as HTMLElement).closest('[data-popover-trigger]') as HTMLElement | null;
+    if (trigger) {
+      e.preventDefault();
+      // Close any open popover first
+      document.querySelectorAll('.tarif-popover').forEach(p => (p as HTMLElement).hidePopover?.());
+      const id = trigger.dataset.popoverTrigger;
+      const popover = id ? document.getElementById(id) : null;
+      popover?.showPopover?.();
+      return;
+    }
+
+    const closeBtn = (e.target as HTMLElement).closest('[data-popover-close]');
+    if (closeBtn) {
+      const popover = closeBtn.closest('.tarif-popover') as HTMLElement | null;
+      popover?.hidePopover?.();
+      return;
+    }
+
+    // Click on backdrop closes all
+    if ((e.target as HTMLElement).matches('.tarif-popover')) {
+      (e.target as HTMLElement).hidePopover?.();
+    }
+  });
+</script>
