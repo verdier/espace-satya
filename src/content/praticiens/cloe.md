@@ -47,4 +47,4 @@ J'ai développé la **Méthode C.S.V** (Conseil, Santé, Vitalité), une approch
 
 Pour toute personne souhaitant améliorer sa santé, son équilibre alimentaire et sa qualité de vie, quel que soit l'âge ou le parcours : enfants, adolescents, adultes, seniors, femmes à toutes les étapes de leur vie (grossesse, post-partum, ménopause), sportifs, ou personnes présentant des besoins nutritionnels spécifiques.
 
-**Duo Pauline + Cloé** : Pour les jeunes souffrant de troubles alimentaires, je travaille en binôme avec Pauline, psychothérapeute, pour une prise en charge globale, à la fois nutritionnelle et psychologique.
+**Duo Pauline + Cloé** : Pour les personnes souffrant de troubles du comportement alimentaire, de l'enfant à l'adulte, je travaille en binôme avec Pauline, psychothérapeute, pour une prise en charge globale, à la fois nutritionnelle et psychologique.

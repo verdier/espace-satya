@@ -1,8 +1,8 @@
 ---
 nom: "Laurie"
 titre: "Sophrologue, Sophr'O"
-accroche: "Ancienne infirmière, Laurie vous accompagne avec la sophrologie vers un apaisement et un mieux-être : gestion du stress, des émotions, des douleurs et du sommeil."
-description: "Laurie Ingles, sophrologue certifiée RNCP et ancienne infirmière, propose des accompagnements personnalisés en sophrologie pour cheminer vers l'apaisement et le mieux-être. Séances en cabinet à Elne, en visio, à domicile ou en groupe."
+accroche: "Infirmière de formation, Laurie vous accompagne avec la sophrologie vers un apaisement et un mieux-être : gestion du stress, des émotions, des douleurs et du sommeil."
+description: "Laurie Ingles, sophrologue certifiée RNCP et infirmière de formation, propose des accompagnements personnalisés en sophrologie pour cheminer vers l'apaisement et le mieux-être. Séances en cabinet à Elne, en visio, à domicile ou en groupe."
 specialites:
   - "Sophrologie"
   - "Gestion des émotions et du stress"
@@ -11,6 +11,12 @@ specialites:
   - "Phobies"
   - "Préparation mentale"
 tarifs:
+  - prestation: "Séance individuelle"
+    prix: "60 €"
+    duree: "1h"
+  - prestation: "Séance de groupe"
+    description: "De 5 à 10 personnes"
+    prix: "120 €"
   - prestation: "Gestion des émotions"
     description: "Stress, anxiété, surmenage"
   - prestation: "Gestion des douleurs"
@@ -38,16 +44,9 @@ Aujourd'hui, je propose des accompagnements en sophrologie pour aider les person
 
 ## Informations pratiques
 
-Je m'adapte à vos besoins :
+Je m'adapte à vos besoins : en cabinet à Elne, en visio, à domicile ou en groupe de 5 à 10 personnes.
 
-- **En cabinet** à Elne, dans un espace dédié permettant écoute et détente en toute sécurité
-- **En visio** et **à domicile** (me contacter avant de réserver pour une prestation à domicile)
-- **Séances de groupe** de 5 à 10 personnes (me contacter pour définir vos besoins et le lieu d'intervention)
-
-- Moyens de règlement : espèces, chèques, virement
-- Parking gratuit devant le cabinet
-- Accès au 1er étage, ascenseur à disposition
-- Pensez à vous rapprocher de votre mutuelle pour une éventuelle prise en charge
+Pensez à vous rapprocher de votre mutuelle pour une éventuelle prise en charge.
 
 ## Pour qui ?
 
