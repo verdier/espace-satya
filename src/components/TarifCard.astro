@@ -5,16 +5,37 @@ interface Props {
   prix?: string;
   duree?: string;
   note?: string;
+  index?: number;
 }
 
-const { prestation, description, prix, duree, note } = Astro.props;
+const { prestation, description, prix, duree, note, index = 0 } = Astro.props;
+const popoverId = `tarif-pop-${index}`;
+const needsPopover = description && description.length > 80;
 ---
 
 <div class="bg-white rounded-2xl p-5 border border-warm-200 shadow-sm hover:shadow-md transition-shadow">
   <div class="flex items-start justify-between gap-3">
     <div class="min-w-0">
       <p class="font-body font-semibold text-warm-800">{prestation}</p>
-      {description && <p class="font-body text-sm text-warm-500 leading-relaxed line-clamp-2 mt-0.5">{description}</p>}
+      {description && (
+        <div class="mt-0.5">
+          <p class="font-body text-sm text-warm-500 leading-relaxed line-clamp-2">{description}</p>
+          {needsPopover && (
+            <>
+              <button popovertarget={popoverId} class="font-body text-xs text-terra-500 hover:text-terra-700 cursor-pointer mt-0.5 transition-colors">
+                Lire la suite
+              </button>
+              <div id={popoverId} popover class="tarif-popover">
+                <p class="font-body font-semibold text-warm-800 mb-2">{prestation}</p>
+                <p class="font-body text-sm text-warm-600 leading-relaxed">{description}</p>
+                {duree && <p class="font-body text-sm text-warm-400 mt-2">{duree}</p>}
+                {note && <p class="font-body text-xs text-sage-600 mt-1">{note}</p>}
+                {prix && <p class="font-heading text-xl font-semibold text-terra-500 mt-3">{prix}</p>}
+              </div>
+            </>
+          )}
+        </div>
+      )}
       {duree && <p class="font-body text-sm text-warm-400 mt-0.5">{duree}</p>}
       {note && <p class="font-body text-xs text-sage-600 mt-1">{note}</p>}
     </div>
@@ -29,3 +50,21 @@ const { prestation, description, prix, duree, note } = Astro.props;
     )}
   </div>
 </div>
+
+<style>
+  .tarif-popover {
+    max-width: 360px;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    border: 1px solid var(--color-warm-200);
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,.1), 0 4px 10px -6px rgba(0,0,0,.1);
+    background: white;
+    margin: auto;
+    inset: 0;
+    height: fit-content;
+  }
+
+  .tarif-popover::backdrop {
+    background: rgba(0,0,0,.15);
+  }
+</style>
