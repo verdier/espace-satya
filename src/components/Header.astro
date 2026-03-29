@@ -1,6 +1,6 @@
 ---
 import Button from './Button.astro';
-import Icon from './Icon.astro';
+import { Icon } from 'astro-icon/components';
 
 const base = import.meta.env.BASE_URL;
 const currentPath = Astro.url.pathname;
@@ -56,7 +56,7 @@ function isActive(href: string) {
         <!-- CTA desktop -->
         <div class="hidden md:block">
           <Button href={`${base}contact/`} size="sm" shadow="sm">
-            <Icon name="chat" class="w-4 h-4" strokeWidth={1.5} />
+            <Icon name="heroicons:chat-bubble-bottom-center-text" class="w-4 h-4" />
             Nous contacter
           </Button>
         </div>

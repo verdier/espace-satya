@@ -1,5 +1,5 @@
 ---
-import Icon from './Icon.astro';
+import { Icon } from 'astro-icon/components';
 import IconBadge from './IconBadge.astro';
 
 interface Props {
@@ -62,7 +62,7 @@ const isCentered = variant === 'centered';
   isCentered && 'text-center',
 ]}>
   <IconBadge size={config.badgeSize} centered={isCentered} class={config.badgeMargin}>
-    <Icon name={icon} class={`${config.iconClass} ${iconColor}`} strokeWidth={1.5} />
+    <Icon name={icon} class={`${config.iconClass} ${iconColor}`} />
   </IconBadge>
   {config.titleTag === 'h3' ? (
     <h3 class={config.titleClass}>{title}</h3>

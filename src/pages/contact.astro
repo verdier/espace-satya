@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/Button.astro';
-import Icon from '../components/Icon.astro';
+import { Icon } from 'astro-icon/components';
 import SectionHeader from '../components/SectionHeader.astro';
 import IconBadge from '../components/IconBadge.astro';
 
@@ -42,7 +42,7 @@ const base = import.meta.env.BASE_URL;
             <!-- Adresse -->
             <div class="mb-8 flex items-start gap-4">
               <IconBadge class="mt-1">
-                <Icon name="location" class="w-6 h-6 text-sage-600" strokeWidth={1.5} />
+                <Icon name="heroicons:map-pin" class="w-6 h-6 text-sage-600" />
               </IconBadge>
               <div>
                 <h3 class="font-heading text-lg font-semibold text-warm-900 mb-1">Adresse</h3>
@@ -59,7 +59,7 @@ const base = import.meta.env.BASE_URL;
                   class="inline-flex items-center gap-1.5 mt-3 font-body text-sm font-medium text-sage-600 hover:text-sage-700 transition-colors"
                 >
                   Ouvrir dans Google Maps
-                  <Icon name="external-link" class="w-4 h-4" />
+                  <Icon name="heroicons:arrow-top-right-on-square" class="w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -67,10 +67,7 @@ const base = import.meta.env.BASE_URL;
             <!-- Email -->
             <div class="mb-8 flex items-start gap-4">
               <IconBadge class="mt-1">
-                <Icon name="email" class="w-6 h-6 text-sage-600" strokeWidth={1.5} />
-              </IconBadge>
-              <div>
-                <h3 class="font-heading text-lg font-semibold text-warm-900 mb-1">Email</h3>
+                <Icon name="heroicons:envelope" class="w-6 h-6 text-sage-600" />
                 <a href="mailto:contact@espacesatya.fr" class="font-body text-warm-600 hover:text-sage-600 transition-colors">
                   contact@espacesatya.fr
                 </a>
@@ -80,7 +77,7 @@ const base = import.meta.env.BASE_URL;
             <!-- Horaires -->
             <div class="mb-8 flex items-start gap-4">
               <IconBadge class="mt-1">
-                <Icon name="clock" class="w-6 h-6 text-sage-600" strokeWidth={1.5} />
+                <Icon name="heroicons:clock" class="w-6 h-6 text-sage-600" />
               </IconBadge>
               <div>
                 <h3 class="font-heading text-lg font-semibold text-warm-900 mb-2">Horaires d'ouverture</h3>
@@ -101,25 +98,27 @@ const base = import.meta.env.BASE_URL;
             <!-- Accès -->
             <div class="flex items-start gap-4">
               <IconBadge class="mt-1">
-                <Icon name="map" class="w-6 h-6 text-sage-600" strokeWidth={1.5} />
+                <Icon name="heroicons:map" class="w-6 h-6 text-sage-600" />
               </IconBadge>
               <div>
                 <h3 class="font-heading text-lg font-semibold text-warm-900 mb-2">Comment venir</h3>
                 <ul class="font-body text-warm-600 space-y-2">
                   <li class="flex items-center gap-2">
-                    <Icon name="car" class="w-4 h-4 text-sage-500 shrink-0" strokeWidth={1.5} />
+                    <Icon name="heroicons:truck" class="w-4 h-4 text-sage-500 shrink-0" />
                     <span><strong class="text-warm-800">En voiture</strong> : parking gratuit du centre Épicentre, entrée principale</span>
                   </li>
                   <li class="flex items-center gap-2">
-                    <Icon name="train" class="w-4 h-4 text-sage-500 shrink-0" strokeWidth={1.5} />
+                    <Icon name="heroicons:map-pin" class="w-4 h-4 text-sage-500 shrink-0" />
                     <span><strong class="text-warm-800">En train</strong> : gare d'Elne à 10 min à pied</span>
                   </li>
                   <li class="flex items-center gap-2">
-                    <Icon name="city" class="w-4 h-4 text-sage-500 shrink-0" strokeWidth={1.5} />
+                    <Icon name="heroicons:building-office-2" class="w-4 h-4 text-sage-500 shrink-0" />
                     <span><strong class="text-warm-800">Depuis Perpignan</strong> : 15 min (D900)</span>
                   </li>
                   <li class="flex items-center gap-2">
-                    <Icon name="waves" class="w-4 h-4 text-sage-500 shrink-0" strokeWidth={1.5} />
+                    <svg class="w-4 h-4 text-sage-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 17c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5-2 3.5 2 5 0M3 12c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5-2 3.5 2 5 0" />
+                    </svg>
                     <span><strong class="text-warm-800">Depuis la côte</strong> : 10 min depuis Argelès-sur-Mer</span>
                   </li>
                 </ul>
@@ -142,7 +141,7 @@ const base = import.meta.env.BASE_URL;
                   size="md"
                   shadow="sm"
                 >
-                  <Icon name="email" class="w-5 h-5" strokeWidth={1.5} />
+                  <Icon name="heroicons:envelope" class="w-5 h-5" />
                   Envoyer un email
                 </Button>
               </div>
@@ -156,7 +155,7 @@ const base = import.meta.env.BASE_URL;
                   href="mailto:contact@espacesatya.fr?subject=Demande%20de%20réservation%20Espace%20Ananda"
                   class="inline-flex items-center gap-2 font-body font-semibold text-sage-700 border-2 border-sage-600 px-5 py-2.5 rounded-full hover:bg-sage-700 hover:text-white transition-all duration-200"
                 >
-                  <Icon name="calendar" class="w-4 h-4" strokeWidth={1.5} />
+                  <Icon name="heroicons:calendar" class="w-4 h-4" />
                   Demander un créneau par email
                 </a>
               </div>

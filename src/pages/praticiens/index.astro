@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Icon from '../../components/Icon.astro';
+import { Icon } from 'astro-icon/components';
 import SectionHeader from '../../components/SectionHeader.astro';
 import IconBadge from '../../components/IconBadge.astro';
 import PraticienCard from '../../components/PraticienCard.astro';
@@ -67,7 +67,7 @@ const base = import.meta.env.BASE_URL;
         <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border-l-4 border-terra-400">
           <div class="flex items-start gap-4">
             <IconBadge color="terra" class="mt-1">
-              <Icon name="star" class="w-6 h-6 text-terra-500" strokeWidth={1.5} />
+              <Icon name="heroicons:star" class="w-6 h-6 text-terra-500" />
             </IconBadge>
             <div>
               <p class="font-body text-terra-600 text-sm font-semibold uppercase tracking-wide mb-2">Collaboration unique</p>
@@ -82,7 +82,7 @@ const base = import.meta.env.BASE_URL;
                 class="inline-flex items-center gap-2 font-body text-sm font-semibold text-terra-600 hover:text-terra-700 transition-colors"
               >
                 En savoir plus
-                <Icon name="chevron-right" class="w-4 h-4" />
+                <Icon name="heroicons:chevron-right" class="w-4 h-4" />
               </a>
             </div>
           </div>

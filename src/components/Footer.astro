@@ -1,5 +1,5 @@
 ---
-import Icon from './Icon.astro';
+import { Icon } from 'astro-icon/components';
 
 const base = import.meta.env.BASE_URL;
 const currentYear = new Date().getFullYear();
@@ -43,7 +43,7 @@ const currentYear = new Date().getFullYear();
         <h3 class="font-heading text-lg font-semibold text-warm-100 mb-4">Nous trouver</h3>
         <address class="not-italic space-y-3">
           <div class="flex items-start gap-3">
-            <Icon name="location" class="w-4 h-4 mt-0.5 text-sage-400 shrink-0" strokeWidth={1.5} />
+            <Icon name="heroicons:map-pin" class="w-4 h-4 mt-0.5 text-sage-400 shrink-0" />
             <p class="font-body text-sm text-warm-400 leading-relaxed">
               17 boulevard des Évadés de France<br />
               1er étage, Épicentre<br />
@@ -51,7 +51,7 @@ const currentYear = new Date().getFullYear();
             </p>
           </div>
           <div class="flex items-center gap-3">
-            <Icon name="email" class="w-4 h-4 text-sage-400 shrink-0" strokeWidth={1.5} />
+            <Icon name="heroicons:envelope" class="w-4 h-4 text-sage-400 shrink-0" />
             <a href="mailto:contact@espacesatya.fr" class="font-body text-sm text-warm-400 hover:text-sage-300 transition-colors">
               contact@espacesatya.fr
             </a>

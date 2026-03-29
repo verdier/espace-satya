@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/Button.astro';
-import Icon from '../components/Icon.astro';
+import { Icon } from 'astro-icon/components';
 import SectionHeader from '../components/SectionHeader.astro';
 import InfoCard from '../components/InfoCard.astro';
 import HeroSection from '../components/HeroSection.astro';
@@ -33,21 +33,21 @@ const forfaits = [
 ];
 
 const equipements = [
-  { icon: 'building', label: '38 m²', desc: 'Surface dégagée' },
-  { icon: 'users', label: '15 pers.', desc: 'Capacité maximale' },
-  { icon: 'sun', label: 'Climatisation', desc: "Individuelle, toute l'année" },
-  { icon: 'map', label: 'Parking', desc: 'Gratuit, sur place' },
-  { icon: 'wifi', label: 'Wi-Fi', desc: 'Inclus dans la location' },
-  { icon: 'table', label: 'Équipement', desc: 'Chaises, tables, enceinte BT' },
+  { icon: 'heroicons:building-office', label: '38 m²', desc: 'Surface dégagée' },
+  { icon: 'heroicons:users', label: '15 pers.', desc: 'Capacité maximale' },
+  { icon: 'heroicons:sun', label: 'Climatisation', desc: "Individuelle, toute l'année" },
+  { icon: 'heroicons:map', label: 'Parking', desc: 'Gratuit, sur place' },
+  { icon: 'heroicons:wifi', label: 'Wi-Fi', desc: 'Inclus dans la location' },
+  { icon: 'heroicons:table-cells', label: 'Équipement', desc: 'Chaises, tables, enceinte BT' },
 ];
 
 const usages = [
-  { icon: 'heart', label: 'Cours collectifs', desc: 'Yoga, pilates, qi gong, méditation, danse' },
-  { icon: 'star', label: 'Ateliers bien-être', desc: 'Aromathérapie, nutrition, gestion du stress' },
-  { icon: 'building', label: 'Formations', desc: 'Modules courts, certifications, supervisions' },
-  { icon: 'chat', label: 'Conférences', desc: 'Santé, bien-être, présentations thématiques' },
-  { icon: 'users', label: 'Cercles & groupes', desc: 'Parole, constellations, soutien' },
-  { icon: 'sun', label: 'Retraites urbaines', desc: 'Journées yoga + massage + nutrition' },
+  { icon: 'heroicons:heart', label: 'Cours collectifs', desc: 'Yoga, pilates, qi gong, méditation, danse' },
+  { icon: 'heroicons:star', label: 'Ateliers bien-être', desc: 'Aromathérapie, nutrition, gestion du stress' },
+  { icon: 'heroicons:building-office', label: 'Formations', desc: 'Modules courts, certifications, supervisions' },
+  { icon: 'heroicons:chat-bubble-bottom-center-text', label: 'Conférences', desc: 'Santé, bien-être, présentations thématiques' },
+  { icon: 'heroicons:users', label: 'Cercles & groupes', desc: 'Parole, constellations, soutien' },
+  { icon: 'heroicons:sun', label: 'Retraites urbaines', desc: 'Journées yoga + massage + nutrition' },
 ];
 ---
 
@@ -105,7 +105,7 @@ const usages = [
                 'Image professionnelle et cadre apaisant',
               ].map((avantage) => (
                 <li class="flex items-start gap-3 font-body text-sm text-warm-600">
-                  <Icon name="check" class="w-5 h-5 text-sage-500 mt-0.5 shrink-0" />
+                  <Icon name="heroicons:check" class="w-5 h-5 text-sage-500 mt-0.5 shrink-0" />
                   {avantage}
                 </li>
               ))}
@@ -247,7 +247,7 @@ const usages = [
             href="mailto:contact@espacesatya.fr?subject=Demande%20de%20réservation%20Espace%20Ananda"
             size="lg"
           >
-            <Icon name="email" class="w-5 h-5" strokeWidth={1.5} />
+            <Icon name="heroicons:envelope" class="w-5 h-5" />
             Envoyer ma demande par email
           </Button>
           <p class="font-body text-xs text-warm-500 mt-4">contact@espacesatya.fr</p>

@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
-import Icon from './Icon.astro';
+import { Icon } from 'astro-icon/components';
 
 interface Props {
   image: ImageMetadata;
@@ -62,7 +62,7 @@ const CONTENT_CLASSES: Record<string, string> = {
   </div>
   {showScrollHint && (
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
-      <Icon name="chevron-down" class="w-6 h-6 text-white/50" strokeWidth={1.5} />
+      <Icon name="heroicons:chevron-down" class="w-6 h-6 text-white/50" />
     </div>
   )}
 </section>
