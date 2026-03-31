@@ -27,6 +27,8 @@ photo: "../../assets/photos/praticiens/laurence-1.jpg"
 photoAlt: "Laurence, hypnothérapeute et praticienne EFT à l'Espace Satya d'Elne"
 ordre: 3
 actif: true
+telephone: "06 75 51 82 67"
+email: "laurence.hypnose66@gmail.com"
 siteWeb: "https://www.facebook.com/people/Laurence-Gaudy/61587349582218/"
 ---
 
