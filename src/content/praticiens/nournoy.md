@@ -47,6 +47,7 @@ tarifs:
     prix: "50 €"
 photo: "../../assets/photos/praticiens/nournoy-1.jpg"
 photoAlt: "Nournoy, esthéticienne Kassie Beauty à l'Espace Satya d'Elne"
+telephone: "06 71 55 65 77"
 ordre: 8
 actif: true
 nouveau: true
