@@ -15,6 +15,7 @@ interface Props {
     telephone?: string;
     email?: string;
     doctolib?: string;
+    planity?: string;
     siteWeb?: string;
   };
   base: string;
@@ -102,8 +103,8 @@ const { praticien, base } = Astro.props;
               Site web
             </a>
           )}
-          {praticien.doctolib && (
-            <a href={praticien.doctolib} target="_blank" rel="noopener noreferrer"
+          {(praticien.doctolib || praticien.planity) && (
+            <a href={praticien.doctolib || praticien.planity} target="_blank" rel="noopener noreferrer"
                class="inline-flex items-center gap-2 bg-terra-700 text-white font-body font-semibold px-6 py-3 rounded-full hover:bg-terra-800 transition-colors shadow-sm hover:shadow-md mt-2 w-fit">
               Prendre rendez-vous
               <Icon name="heroicons:arrow-top-right-on-square" class="w-4 h-4" />

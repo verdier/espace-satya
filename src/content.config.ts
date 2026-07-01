@@ -16,6 +16,8 @@ const praticiens = defineCollection({
     email: z.string().optional(),
     siteWeb: z.string().optional(),
     doctolib: z.string().optional(),
+    planity: z.string().optional(),
+    video: z.string().optional(),
     tarifs: z.array(z.object({
       prestation: z.string(),
       description: z.string().optional(),

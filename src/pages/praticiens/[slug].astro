@@ -19,6 +19,14 @@ const { praticien } = Astro.props;
 const { Content } = await render(praticien);
 const base = import.meta.env.BASE_URL;
 
+// Extraire l'ID YouTube si vidéo présente
+const videoUrl = praticien.data.video;
+let youtubeId: string | null = null;
+if (videoUrl) {
+  const match = videoUrl.match(/(?:shorts\/|watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+  youtubeId = match?.[1] ?? null;
+}
+
 // Navigation entre praticiens
 const allPraticiens = await getActivePraticiens();
 const currentIdx = allPraticiens.findIndex((p) => p.id === praticien.id);
@@ -49,6 +57,23 @@ const next = currentIdx < allPraticiens.length - 1 ? allPraticiens[currentIdx + 
         </div>
 
         <TarifsSection tarifs={praticien.data.tarifs} />
+
+        {/* Vidéo YouTube */}
+        {youtubeId && (
+          <div class="mt-12">
+            <h2 class="font-heading text-3xl font-light text-warm-900 mb-6 leading-tight">Découvrir en vidéo</h2>
+            <div class="relative w-full max-w-sm mx-auto aspect-[9/16] rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                src={`https://www.youtube.com/embed/${youtubeId}`}
+                title={`Vidéo de ${praticien.data.nom}`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                class="absolute inset-0 w-full h-full"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        )}
 
         <!-- CTA contact -->
         <div class="mt-12 bg-sage-50 rounded-2xl p-8 border border-sage-200 text-center">

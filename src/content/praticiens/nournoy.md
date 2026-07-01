@@ -45,6 +45,8 @@ tarifs:
     prix: "90 €"
   - prestation: "Maquillage invitée"
     prix: "50 €"
+planity: "https://www.planity.com/kassie-beauty-66200-elne"
+video: "https://youtube.com/shorts/FaQNgQaN6g0"
 photo: "../../assets/photos/praticiens/nournoy-1.jpg"
 photoAlt: "Nournoy, esthéticienne Kassie Beauty à l'Espace Satya d'Elne"
 telephone: "06 71 55 65 77"
